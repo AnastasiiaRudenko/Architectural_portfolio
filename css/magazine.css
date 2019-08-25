@@ -156,6 +156,11 @@ body{
 	height:100%;
 	position:absolute;
 	top:0;
+	opacity: 1;
+	background-image:url(../pics/arrows.png);
+	background-position:-4px 50%;
+	background-repeat:no-repeat;
+	background-color:rgba(0,0,0, 0.2)
 }
 
 .magazine-viewport .next-button{
@@ -186,6 +191,7 @@ body{
 	background-image:url(../pics/arrows.png);
 	background-position:-4px 50%;
 	background-repeat:no-repeat;
+	opacity:1;
 }
 
 .magazine-viewport .previous-button-down,
@@ -198,6 +204,7 @@ body{
 	background-image:url(../pics/arrows.png);
 	background-position:-38px 50%;
 	background-repeat:no-repeat;
+	opacity:1;
 }
 
 .magazine-viewport .zoom-in .next-button,

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="img/nastya-logo.png">
-    <title>Anastasia Rudenko Resume</title>
+    <link rel="icon" type="image/png" href="img/nastya-logo-dark.png">
+    <title>Anastasia Rudenko Portfolio</title>
     <link rel="icon" type="image/png" href="pics/favicon.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,17 +24,24 @@
 
 <body>
 
+    <div class="loader">
+        <img data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000" src="img/nastya-logo.png" alt="logo">
+    </div>
+
     <section id="header" class="header">
-        <div data-aos="fade-down" data-aos-duration="1500" class="col-sm-9 start-layout">
+        <div data-aos="fade-down" data-aos-duration="2500" data-aos-delay="2500" class="col-sm-9 start-layout">
             <h1>Anastasia Rudenko</h1>
             <h4><img src="img/line.svg" alt=""> &nbsp; &nbsp;design &nbsp;| &nbsp;architecture &nbsp;|
                 &nbsp;isnpiration &nbsp; &nbsp;<img src="img/line.svg" alt=""></h4>
             <a class="btn start-btn smoothScroll" href="#contents"><img class="logo" src="img/nastya-logo.png"
                     alt=""></a>
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="3000" data-aos-duration="3000"
+                class="press-to-start"><i class="fas fa-caret-up"></i><span>Press to start</span></div>
+
         </div>
         <div class="banner">
             <video id="myVideo" class="banner__video" width="100%" preload="auto" autoplay="autoplay" loop>
-                <source src="video/video.mp4" />
+                <source src="video/1.mp4" />
             </video>
         </div>
     </section>
@@ -42,6 +49,7 @@
 
     <section id="contents" class="contents">
         <div class="col-sm-12 contents-layout">
+
             <h1 data-aos="fade-down" data-aos-duration="1500">Contents</h1>
             <div class="cards-layout col-sm-6">
                 <a href="#profile" class="col-sm-4 smoothScroll links">
@@ -51,14 +59,14 @@
                         </div>
                         <div>
                             <span>Profile</span>
-                            <span>proffesional information </br> hightlights</span>
+                            <span>proffesional information </br><span> hightlights</span>
                         </div>
                     </div>
                 </a>
                 <a href="#portfolio" class="col-sm-4 smoothScroll links">
                     <div data-aos="zoom-in" data-aos-duration="1000" class="card profile-card">
                         <div>
-                                <i class="fas fa-book-open"></i>
+                            <i class="fas fa-book-open"></i>
                         </div>
                         <div>
                             <span>Portfolio</span>
@@ -69,7 +77,7 @@
                 <a href="#contacts" class="col-sm-4 smoothScroll links">
                     <div data-aos="zoom-in" data-aos-duration="1000" class="card profile-card">
                         <div>
-                                <i class="fas fa-comment-dots"></i>
+                            <i class="fas fa-comment-dots"></i>
                         </div>
                         <div>
                             <span>Contacts</span>
@@ -303,6 +311,10 @@
 
     <script>
         AOS.init();
+
+        $(window).ready(function () {
+            $(".loader").delay(1850).fadeOut(1850);
+        });
 
         async function openPage(page) {
             window.location.replace(`#page/${page}`);

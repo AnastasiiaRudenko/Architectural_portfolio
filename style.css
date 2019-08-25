@@ -24,12 +24,12 @@ h1 {
     position: relative;
     overflow: hidden;
     background: rgba(0, 0, 0, .5) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQIW2NkYGD4z8DAwMgAI0AMDA4AI3EBBCKrOnQAAAAASUVORK5CYII=');
-    font-size: 1em;
-    font-weight: 700;
+    font-size: 4em;
+    font-weight: 900;
     text-transform: uppercase;
     text-align: center;
     line-height: 100vh;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .banner__video {
@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100vh;
     /* background: url(img/section_1_background.png) top no-repeat / cover; */
-    color: aliceblue;
+    color: white;
     box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -211,17 +211,17 @@ body::-webkit-scrollbar-thumb {
 
 .card:hover i {
     font-size: 12vh;
-    color: aliceblue;
+    color: white;
 }
 
 .card span:nth-child(1) {
     text-transform: uppercase;
-    color: aliceblue;
+    color: white;
     font-size: 3vh;
 }
 
 .card span:nth-child(2) {
-    color: aliceblue;
+    color: white;
     font-size: 2vh;
     width: 90%;
 }
@@ -255,7 +255,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .profile-info div {
-    color: aliceblue;
+    color: white;
 }
 
 .profile-info h1 {
@@ -295,7 +295,7 @@ body::-webkit-scrollbar-thumb {
 .contacts h1 {
     text-align: center;
     font-size: 8vh;
-    color: aliceblue;
+    color: white;
 }
 
 .contact-form {
@@ -305,13 +305,13 @@ body::-webkit-scrollbar-thumb {
 
 .contact-form label {
     font-size: 2vh;
-    color: aliceblue;
+    color: white;
     margin-top: 1em;
 }
 
 .contact-form input {
     color: #222;
-    background-color: aliceblue;
+    background-color: white;
     border: 0px;
     border-radius: 5px;
     padding: 1vh;
@@ -338,7 +338,7 @@ body::-webkit-scrollbar-thumb {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    background-color: aliceblue;
+    background-color: white;
 }
 
 .contact-form textarea::placeholder {
@@ -350,7 +350,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 1em;
     padding: 0.5em;
     color: #222;
-    background-color: aliceblue;
+    background-color: white;
     border: 0px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -403,7 +403,7 @@ body::-webkit-scrollbar-thumb {
 
 /* DESKTOP */
 
-@media(min-width: 1380px) {
+@media(min-width: 1080px) {
     .profile {
         height: 100vh;
     }
@@ -417,7 +417,7 @@ body::-webkit-scrollbar-thumb {
         position: absolute;
         justify-content: center;
         align-items: center;
-        color: aliceblue;
+        color: white;
         text-align: center;
         z-index: 1;
     }
@@ -504,6 +504,23 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+.press-to-start {
+    display: flex;
+    flex-direction: column;
+}
+
+.press-to-start i {
+    font-size: 4vh;
+    line-height: 70%;
+    padding-top: 1vh;
+}
+
+.press-to-start span {
+    font-size: 1.7vh;
+    text-transform: lowercase;
+    padding: 0;
+}
+
 .collage {
     display: flex;
     justify-content: center;
@@ -529,7 +546,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+    color: white;
     text-align: center;
     z-index: 1;
 }
@@ -620,6 +637,41 @@ body::-webkit-scrollbar-thumb {
     background: url(img/figure11.jpg) center / cover;
 }
 
-.hidden {
-    display: none;
+.loader {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loader 2s;
+    animation-delay: 2s;
+}
+
+.loader img {
+    width: 6vh;
+    animation: loader-img 2s;
+    animation-delay: 2s;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+        /* height: 100vh; */
+    }
+    100% {
+        opacity: 0;
+        /* height: 0; */
+    }
+}
+
+@keyframes loader-img {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
